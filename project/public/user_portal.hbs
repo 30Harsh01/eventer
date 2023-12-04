@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- css -->
+    {{!-- <link rel="stylesheet" href="style.css"> --}}
+</head>
+<body>
+     <!-- navbar -->
+  <nav class="navbar navbar-expand-md navbar-light pt-5 pb-4">
+    <div class="container-xxl">
+      <!-- navbar brand / title -->
+      <a class="navbar-brand" href="#">
+        <span class="text-secondary fw-bold">
+            {{!-- <i class="fa-solid fa-calendar-check fs-2"></i> --}}
+          <div id="emaildisplay"></div>
+        </span>
+      </a>
+      <!-- toggle button for mobile nav -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- navbar links -->
+      <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <div class="log btn btn-light border border-1 border-secondary btn-outline-secondary">
+            <a class="nav-link fw-bold" href="/">Log Out</a></div>
+          </li> 
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- main panel-cards -->
+  <div class="panel" style="display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  flex-wrap: wrap;">
+
+
+  <div class="card " style="width: 18rem; margin: 10px;
+  background-color: rgb(174, 174, 174);">
+    <div class="card-body">
+      <h5 class="card-title">Events Bookings</h5>
+      <p class="card-text">List of all the events that are going to be occured.</p>
+      <div class="text-white btn btn-outline-secondary btn-dark" id="eventdata">
+        Click here
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="card" style="width: 18rem; margin: 10px;
+  background-color: rgb(174, 174, 174);">
+    <div class="card-body">
+      <h5 class="card-title">Generate</h5>
+      <p class="card-text">Click here to generate your own events. </p>
+      <div class="text-white btn btn-dark btn-outline-secondary" id="generateevent">
+        Click here
+      </div>
+    </div>
+  </div>
+
+
+<div class="card" style="width: 18rem; margin: 10px;
+  background-color: rgb(174, 174, 174);">
+    <div class="card-body">
+      <h5 class="card-title">Your events/Delete</h5>
+      <p class="card-text">Get the all events you have generated.</p>
+      <div class="text-white btn btn-dark btn-outline-secondary" id="getyourevents">
+        Click here
+      </div>
+    </div>
+  </div>
+
+
+  <div class="card" style="width: 18rem; margin: 10px;
+  background-color: rgb(174, 174, 174);">
+    <div class="card-body">
+      <h5 class="card-title">Bookings</h5>
+      <p class="card-text">All your tickets that you booked are here.</p>
+      <div>
+    <form action="/bookings" method="POST"  id="yourticket">
+        <input class="text-white btn btn-dark btn-outline-secondary" type="submit" value="Click here">
+    </form>      
+    </div>
+  </div>
+
+</div>
+    <script type="module" src="user_portal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
